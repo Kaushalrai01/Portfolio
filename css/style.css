@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Libre+Baskerville&family=Roboto&family=Source+Code+Pro:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: #1c1e22;
+    color: #FFFF;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ------NAVBAR------ */
+
+
+.navbar {
+    width: 100%;
+    background-color: #232427;
+    color: #fff;
+    padding: 12px 0;
+    position: fixed;
+}
+
+.container {
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav-list a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+
+
+/* ------MAIN CONTENT------ */
+
+
+section {
+    padding: 0 10%;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #02fcdb;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #777;
+}
+
+h4 {
+    margin-top: 8px;
+    text-align: center;
+    font-family: "Source Code Pro", monospace;
+}
+
+
+/* ------HOME SECTION------ */
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20vh;
+    width: 100vw;
+    height: auto;
+    font-size: 16px;
+}
+
+.leftHomeContent {
+    align-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.hello {
+    margin: 10px auto;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.name {
+    margin: 10px auto;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.technology {
+    margin: 10px auto;
+    font-size: 2em;
+    font-weight: bold;
+    color: #02fcdb;
+}
+
+.btns {
+    display: flex;
+    margin: 10px auto;
+    gap: 20px;
+
+}
+
+.downloadbtn,
+.contactbtn {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    color: #FFFF;
+    background-color: #1895ae;
+}
+
+.downloadbtn:hover,
+.contactbtn:hover {
+    background-color: #02fcdbb8;
+}
+
+.icons {
+    display: flex;
+    margin: 15px auto;
+    gap: 20px;
+}
+
+.icons img {
+    width: 32px;
+    cursor: pointer;
+}
+
+.rightHomeContent {
+    align-content: center;
+    height: auto;
+    /* display: none; */
+}
+
+.rightHomeContent img {
+    width: 100%;
+    border-radius: 20%;
+    box-shadow: 5px 5px 10px #02fcdb;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+
+/* ------ABOUT SECTION------ */
+
+
+#about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    width: 100vw;
+    height: auto;
+}
+
+.leftAboutContent {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.leftAboutContent img {
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 20%;
+    box-shadow: 5px 5px 15px #02fcdb;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.rightAboutContent {
+    width: 100%;
+}
+
+p {
+    padding: 6px 0;
+    line-height: 1.5;
+}
+
+.tabs {
+    display: flex;
+    gap: 40px;
+}
+
+.tabBtn {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    color: #02fcdb;
+    background-color: #1c1e22;
+}
+
+.tabBtn.active {
+    background-color: #383737;
+}
+
+.tabContent {
+    display: none;
+}
+
+.tabContent.active {
+    display: block;
+}
+
+.tabContent li {
+    padding-bottom: 5px;
+    list-style: none;
+}
+
+
+/* ------PROJECTS SECTION------ */
+
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    width: 100vw;
+    height: auto;
+}
+
+hr {
+    width: 100%;
+    border-width: 1.5px;
+    border-color: #02fcdb;
+}
+
+.cards {
+    display: flex;
+    margin: 44px auto;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.projectlist img {
+    box-shadow: 5px 5px 8px #777;
+    margin-right: 14px;
+    width: 300px;
+    height: 280px;
+    border-radius: 20px;
+    overscroll-behavior-x: auto;
+}
+
+.projectlist a img {
+    width: 18px;
+    height: auto;
+    box-shadow: none;
+}
+
+
+/* ------CONTACT SECTION------ */
+
+
+#contact {
+    padding-top: 10vh;
+    width: 100vw;
+    height: auto;
+}
+
+.contactPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    display: flex;
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+}
+
+.leftPage,
+.rightPage {
+    margin: 5px 10px;
+    padding: 25px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px #02fcdb;
+}
+
+span {
+    color: #05b19a;
+}
+
+.inputArea {
+    margin: 14px auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #FFFF;
+    background-color: #1895ae;
+}
+
+.btn:hover {
+    background-color: #02fcdbb8;
+}
+
+
+/* ------FOOTER SECTION------ */
+
+
+footer {
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    color: #CCC;
+}
+
+
+
+/* ------MEDIA QUERIES------ */
+
+
+@media (max-width: 1024px) {
+
+    .rightHomeContent {
+        display: none;
+    }
+
+    .leftHomeContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .leftAboutContent {
+        display: block;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #232427;
+        border-radius: 8px;
+        width: 180px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .page{
+        flex-direction: column;
+    }
+
+}
